@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Los 100 Mejores Prompts para Marketing Digital</title>
+  <meta name="description" content="Ebook con 100 prompts listos para copiar y pegar, enfocados en ventas, contenido, campañas y productividad. Incluye bonus: GPT optimizador de prompts." />
+  <style>
+    :root {
+      --bg: #061428;
+      --bg-soft: #0a1f3d;
+      --primary: #00c2ff;
+      --primary-dark: #0077ff;
+      --text: #f5fbff;
+      --muted: #b8d7ea;
+      --card: rgba(255,255,255,0.08);
+      --border: rgba(255,255,255,0.14);
+      --success: #29f2b1;
+      --warning: #ffd166;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: radial-gradient(circle at top left, #083d77 0%, var(--bg) 42%, #020817 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: 0 auto;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(0, 194, 255, 0.12);
+      border: 1px solid rgba(0, 194, 255, 0.35);
+      color: #b9f1ff;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 22px;
+    }
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: #00101f;
+      font-weight: 900;
+      padding: 16px 26px;
+      border-radius: 14px;
+      box-shadow: 0 14px 34px rgba(0, 194, 255, 0.32);
+      transition: transform .2s ease, box-shadow .2s ease;
+      text-transform: uppercase;
+      letter-spacing: .3px;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 42px rgba(0, 194, 255, 0.44);
+    }
+
+    .btn.secondary {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+      box-shadow: none;
+    }
+
+    header {
+      padding: 22px 0;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(16px);
+      background: rgba(2, 8, 23, 0.72);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo {
+      font-weight: 900;
+      font-size: 18px;
+      color: var(--text);
+    }
+
+    .logo span { color: var(--primary); }
+
+    .hero {
+      padding: 86px 0 70px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 54px;
+      align-items: center;
+    }
+
+    h1 {
+      font-size: clamp(40px, 6vw, 72px);
+      line-height: .98;
+      letter-spacing: -2px;
+      margin-bottom: 24px;
+    }
+
+    h1 span { color: var(--primary); }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 20px;
+      max-width: 650px;
+      margin-bottom: 30px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .price-line {
+      color: var(--warning);
+      font-weight: 800;
+      margin-top: 12px;
+    }
+
+    .microcopy {
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    .ebook-card {
+      position: relative;
+      background: linear-gradient(160deg, rgba(0,194,255,.18), rgba(255,255,255,.06));
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 30px;
+      box-shadow: 0 24px 80px rgba(0,0,0,.38);
+      overflow: hidden;
+    }
+
+    .ebook-card::before {
+      content: "";
+      position: absolute;
+      inset: -80px -60px auto auto;
+      width: 200px;
+      height: 200px;
+      background: rgba(0, 194, 255, .22);
+      filter: blur(40px);
+      border-radius: 50%;
+    }
+
+    .ebook-cover {
+      position: relative;
+      min-height: 430px;
+      border-radius: 22px;
+      background: linear-gradient(145deg, #061a35, #0e63ce 48%, #00c2ff);
+      border: 1px solid rgba(255,255,255,.22);
+      padding: 34px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: inset 0 0 34px rgba(255,255,255,.08);
+    }
+
+    .ebook-cover small {
+      color: #dff8ff;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .ebook-cover h2 {
+      font-size: 44px;
+      line-height: 1;
+      letter-spacing: -1px;
+    }
+
+    .ebook-cover p {
+      color: #e9fbff;
+      font-weight: 700;
+    }
+
+    section { padding: 72px 0; }
+
+    .section-title {
+      font-size: clamp(30px, 4vw, 46px);
+      line-height: 1.05;
+      letter-spacing: -1px;
+      margin-bottom: 18px;
+      text-align: center;
+    }
+
+    .section-subtitle {
+      color: var(--muted);
+      max-width: 760px;
+      margin: 0 auto 38px;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 26px;
+    }
+
+    .card h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .card p, .card li { color: var(--muted); }
+
+    .icon {
+      width: 46px;
+      height: 46px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      background: rgba(0, 194, 255, .16);
+      color: var(--primary);
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+
+    .problem {
+      background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(0,194,255,.04));
+    }
+
+    .list {
+      list-style: none;
+      display: grid;
+      gap: 12px;
+    }
+
+    .list li {
+      padding-left: 32px;
+      position: relative;
+    }
+
+    .list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--success);
+      font-weight: 900;
+    }
+
+    .offer {
+      background: linear-gradient(135deg, rgba(0, 119, 255, .20), rgba(0, 194, 255, .10));
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .offer-box {
+      max-width: 820px;
+      margin: 0 auto;
+      text-align: center;
+      background: rgba(2,8,23,.58);
+      border: 1px solid rgba(0,194,255,.35);
+      border-radius: 28px;
+      padding: 42px 28px;
+      box-shadow: 0 24px 70px rgba(0,0,0,.3);
+    }
+
+    .price {
+      font-size: 58px;
+      line-height: 1;
+      font-weight: 900;
+      color: var(--primary);
+      margin: 20px 0 10px;
+    }
+
+    .testimonial {
+      font-size: 20px;
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+      padding: 18px 0;
+    }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      color: var(--text);
+      font-size: 18px;
+      font-weight: 800;
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .faq-answer {
+      display: none;
+      color: var(--muted);
+      padding-top: 12px;
+    }
+
+    .faq-item.active .faq-answer { display: block; }
+
+    footer {
+      padding: 36px 0;
+      color: var(--muted);
+      text-align: center;
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 860px) {
+      .hero-grid, .grid-2, .grid-3 { grid-template-columns: 1fr; }
+      .hero { padding-top: 54px; }
+      nav .btn { display: none; }
+      .ebook-cover { min-height: 360px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">100 Prompts<span> Marketing</span></div>
+        <a href="#comprar" class="btn">Quiero mi ebook</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="badge">⚡ Ebook práctico + bonus GPT de regalo</div>
+          <h1>Deja de perder horas creando contenido. Usa <span>100 prompts listos</span> para marketing digital.</h1>
+          <p class="subtitle">Un ebook directo, accionable y enfocado en ventas para marketers, freelancers, creadores de contenido y emprendedores. Además, te llevas de regalo un GPT optimizador de prompts que mejora, pule y convierte cualquier prompt en una instrucción más profesional.</p>
+          <div class="hero-actions">
+            <a href="#comprar" class="btn">Quiero mi ebook</a>
+            <a href="#contenido" class="btn secondary">Ver qué incluye</a>
+          </div>
+          <p class="price-line">Acceso por solo USD $20</p>
+          <p class="microcopy">Incluye bonus: GPT optimizador para transformar prompts simples en prompts profesionales.</p>
+        </div>
+
+        <div class="ebook-card" aria-label="Mockup del ebook Los 100 Mejores Prompts para Marketing Digital">
+          <div class="ebook-cover">
+            <small>Marketing Digital + IA</small>
+            <h2>Los 100 Mejores Prompts</h2>
+            <p>Contenido • Ventas • Campañas • Estrategia • Productividad</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="problem">
+      <div class="container">
+        <h2 class="section-title">La IA no es el problema. El problema es no saber qué pedirle.</h2>
+        <p class="section-subtitle">Mientras otros improvisan prompts genéricos, tú puedes trabajar con instrucciones pensadas para crear mejores ideas, mejores textos y mejores campañas.</p>
+        <div class="grid-3">
+          <div class="card"><div class="icon">⏳</div><h3>Pierdes demasiado tiempo</h3><p>Crear ideas, posts, emails y anuncios desde cero puede consumir horas que deberías invertir en vender.</p></div>
+          <div class="card"><div class="icon">🤖</div><h3>No sabes usar IA con estrategia</h3><p>La IA responde mejor cuando recibe instrucciones claras. Este ebook te da una base lista para ejecutar.</p></div>
+          <div class="card"><div class="icon">📉</div><h3>Tu contenido no convierte</h3><p>No basta con publicar. Necesitas prompts orientados a captar atención, generar deseo y mover a la acción.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contenido">
+      <div class="container">
+        <h2 class="section-title">Todo lo que necesitas en un solo libro</h2>
+        <p class="section-subtitle">100 prompts organizados para acelerar tu marketing, mejorar tu comunicación y ayudarte a crear piezas con enfoque comercial.</p>
+        <div class="grid-2">
+          <div class="card">
+            <h3>Qué vas a poder crear</h3>
+            <ul class="list">
+              <li>Ideas de contenido para redes sociales.</li>
+              <li>Copys para anuncios y campañas.</li>
+              <li>Emails de venta y seguimiento.</li>
+              <li>Ganchos, titulares y llamadas a la acción.</li>
+              <li>Estrategias para productos, servicios y lanzamientos.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Por qué funciona</h3>
+            <ul class="list">
+              <li>Prompts listos para copiar y pegar.</li>
+              <li>Enfoque directo en ventas y conversión.</li>
+              <li>Basado en usos reales de campañas de marketing.</li>
+              <li>Ideal para marketers, freelancers y creadores.</li>
+              <li>Simple, práctico y sin teoría innecesaria.</li>
+              <li>Incluye un bonus de regalo: GPT optimizador de prompts.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="section-title">Bonus de regalo: GPT optimizador de prompts</h2>
+        <p class="section-subtitle">No solo recibes los 100 prompts. También obtienes un agente que toma cualquier prompt básico y lo mejora para que sea más claro, estratégico y profesional.</p>
+        <div class="grid-3">
+          <div class="card"><div class="icon">⚙️</div><h3>Optimiza tus prompts</h3><p>Convierte instrucciones simples en prompts más completos, ordenados y precisos para obtener mejores respuestas de la IA.</p></div>
+          <div class="card"><div class="icon">✨</div><h3>Mejora la calidad</h3><p>El agente ayuda a pulir estructura, contexto, tono y objetivo para que cada prompt tenga apariencia profesional.</p></div>
+          <div class="card"><div class="icon">🎯</div><h3>Más claridad, menos ensayo y error</h3><p>Evita perder tiempo corrigiendo respuestas pobres. Empieza con mejores instrucciones desde el primer intento.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="section-title">Beneficios inmediatos</h2>
+        <p class="section-subtitle">Este ebook está creado para que pases de “no sé qué escribir” a “ya tengo una estructura para vender”.</p>
+        <div class="grid-3">
+          <div class="card"><div class="icon">🚀</div><h3>Ahorra tiempo</h3><p>Reduce el tiempo de creación de contenido y acelera tu flujo de trabajo con prompts reutilizables.</p></div>
+          <div class="card"><div class="icon">💰</div><h3>Vende con más intención</h3><p>Crea textos pensados para atraer, convencer y convertir, no solo para llenar redes sociales.</p></div>
+          <div class="card"><div class="icon">🧠</div><h3>Usa IA con claridad</h3><p>Evita respuestas vagas y consigue resultados más útiles con instrucciones mejor formuladas.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="section-title">Antes vs. después</h2>
+        <div class="grid-2">
+          <div class="card">
+            <h3>Antes</h3>
+            <ul class="list">
+              <li>Horas pensando ideas.</li>
+              <li>Prompts improvisados y respuestas genéricas.</li>
+              <li>Contenido sin dirección comercial.</li>
+              <li>Sensación de estar perdiendo oportunidades.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Después</h3>
+            <ul class="list">
+              <li>Prompts listos para ejecutar.</li>
+              <li>Ideas, copys y campañas en menos tiempo.</li>
+              <li>Contenido alineado con ventas.</li>
+              <li>Un sistema práctico para trabajar con IA.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="section-title">Lo que dicen quienes ya lo usan</h2>
+        <div class="grid-3">
+          <div class="card"><p class="testimonial">“Reducí mi tiempo de creación de semanas a horas.”</p><p>— Marketer freelance</p></div>
+          <div class="card"><p class="testimonial">“Ahora tengo ideas para campañas sin empezar desde cero.”</p><p>— Creador de contenido</p></div>
+          <div class="card"><p class="testimonial">“Me ayudó a usar IA con un enfoque mucho más comercial.”</p><p>— Emprendedor digital</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="offer" id="comprar">
+      <div class="container">
+        <div class="offer-box">
+          <div class="badge">Oferta simple y directa</div>
+          <h2 class="section-title">Accede hoy a los 100 mejores prompts para marketing digital</h2>
+          <p class="section-subtitle">Deja de improvisar. Ten a mano un arsenal de prompts para crear contenido, campañas y copys orientados a vender. Y llévate gratis el GPT optimizador de prompts para mejorar cualquier instrucción que escribas.</p>
+          <div class="price">USD $20</div>
+          <p class="microcopy">Pago único. Ebook digital + bonus GPT optimizador de prompts incluido.</p>
+          <br />
+          <a href="TU_LINK_DE_PAGO_AQUI" class="btn">Quiero mi ebook</a>
+          <p class="microcopy">Reemplaza “TU_LINK_DE_PAGO_AQUI” por tu enlace de compra.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="section-title">Preguntas frecuentes</h2>
+        <div class="faq">
+          <div class="faq-item active">
+            <button class="faq-question">¿Este ebook es para principiantes? <span>+</span></button>
+            <div class="faq-answer">Está pensado para nivel intermedio, pero cualquier persona que ya entienda lo básico de marketing puede aprovecharlo.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">¿Los prompts sirven para ChatGPT? <span>+</span></button>
+            <div class="faq-answer">Sí. Puedes usarlos en ChatGPT y adaptarlos a otras herramientas de IA conversacional.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">¿Puedo usarlos para clientes? <span>+</span></button>
+            <div class="faq-answer">Sí. Son útiles para freelancers, agencias, marketers y creadores que trabajan contenido o campañas para terceros.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">¿Qué es el GPT optimizador de prompts? <span>+</span></button>
+            <div class="faq-answer">Es un agente de regalo diseñado para ayudarte a mejorar cualquier prompt: lo ordena, lo hace más claro, agrega contexto y le da un enfoque más profesional.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">¿Promete ventas garantizadas? <span>+</span></button>
+            <div class="faq-answer">No. El ebook y el bonus te dan herramientas enfocadas en mejorar tu marketing, pero los resultados dependen de tu oferta, audiencia, ejecución y estrategia.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container" style="text-align:center;">
+        <h2 class="section-title">Tu próximo contenido no debería tomarte días.</h2>
+        <p class="section-subtitle">Obtén los prompts, adáptalos a tu negocio y empieza a crear con más velocidad, claridad y enfoque comercial.</p>
+        <a href="#comprar" class="btn">Quiero mi ebook</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 — Los 100 Mejores Prompts para Marketing Digital. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    // FAQ interactivo simple
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      const button = item.querySelector('.faq-question');
+      button.addEventListener('click', () => {
+        item.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+</html>
